@@ -1,0 +1,11 @@
+<resources>
+
+	<string name="app_name">Simplecalc</string>
+	<string name="hello_world">Introduzca los datos</string>
+	<string name="menu_settings">Settings</string>
+	<string name="title_activity_main">SimpleCalc</string>
+	<string name="btnAdd">Sumar</string>
+	<string name="btnMult">Multiplicar</string>
+	<string name="tv_resultado">Resultado</string>
+
+</resources>
