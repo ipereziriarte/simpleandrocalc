@@ -1,4 +1,4 @@
 simpleandrocalc
 ===============
 
-Simple Android Calc for testing junit classess
+Simple Android Calculator Project for testing **Junit** classes
