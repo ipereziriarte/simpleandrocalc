@@ -54,6 +54,13 @@ public class MathValidation extends ActivityInstrumentationTestCase2<MainActivit
     private static final String NUMBER_24 = "2 4 ENTER ";
     private static final String NUMBER_74 = "7 4 ENTER ";
     private static final String ADD_RESULT = "98";
+    private static final String NUMBER_5_DOT_5 = "5 . 5 ENTER ";
+    private static final String ADD_DECIMAL_RESULT = "79.5";
+    private static final String MULTIPLY_RESULT = "1776";
+
+    /**
+     * Public function for testing the add function
+     */
     public void testAddValues() {
         // Send command to android terminal
         sendKeys(NUMBER_24);
@@ -74,6 +81,29 @@ public class MathValidation extends ActivityInstrumentationTestCase2<MainActivit
          * el test falla y por tanto hemos encontrado un bug!
          */
         assertTrue("Add result should be 98", mathResult.equals(ADD_RESULT));
+    }
+
+    /**
+     * Other testing function for the add function. Notice that you can run all
+     * the test in a row
+     */
+    public void testAddDecimalValues() {
+        sendKeys(NUMBER_5_DOT_5 + NUMBER_74 + "ENTER");
+        final String mathResult = tvResult.getText().toString();
+        assertTrue("Add result should be " + ADD_DECIMAL_RESULT + "but was "
+                + mathResult, mathResult.equals(ADD_DECIMAL_RESULT));
+    }
+
+    /**
+     * Test for the multiply method. Notice the DPAD_RIGHT command to move the
+     * pointer to the multiply button
+     */
+    public void testMultiplyValues() {
+        sendKeys(NUMBER_24 + NUMBER_74 + " DPAD_RIGHT ENTER");
+
+        final String mathResult = tvResult.getText().toString();
+        assertTrue("Multiply result should be " + MULTIPLY_RESULT + " but was "
+                + mathResult, mathResult.equals(MULTIPLY_RESULT));
     }
 
 
